@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "PyeongChangPeace-Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Paperlogy-8ExtraBold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+body {
+  font-family: "Paperlogy-8ExtraBold";
+  background: url(../img/background.png);
+}
+/*con01*/
+.con01 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.con01 .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  box-sizing: border-box;
+}
+.con01 .top .logo {
+}
+.con01 .top .line01 {
+  width: 1200px;
+
+  border-bottom: 2px solid #222;
+}
+.con01 .top .bar {
+  font-size: 3rem;
+}
+.con01 .title {
+  width: 100%;
+  font-family: "PyeongChangPeace-Bold";
+  font-size: 9rem;
+  text-align: center;
+}
+
+.con01 .textBox {
+  width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #222;
+  border-radius: 50px;
+  box-sizing: border-box;
+  padding: 0.5rem 3rem;
+  margin: 0px auto;
+}
+.con01 .textBox p {
+  font-size: 1.5rem;
+}
+.con01 .textBox img {
+  width: 50px;
+}
+.con01 .name {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%) rotate(-10deg);
+}
+.con01 .name img {
+  width: 300px;
+}
+.con01 .bottom {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+}
+.con01 .bottom .line02 {
+  width: 1200px;
+
+  border-bottom: 2px solid #222;
+}
