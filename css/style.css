@@ -35,6 +35,7 @@ body {
   font-family: "Paperlogy";
   background: url(../img/background.png);
 }
+
 /*con01*/
 .con01 {
   width: 100%;
@@ -65,19 +66,17 @@ body {
   font-family: "PyeongChangPeace-Bold";
 
   text-align: center;
-
-  margin-top: 50px;
 }
 #con01 .title h2 {
   font-size: 12vw;
 }
 #con01 .title h2 span {
   display: block;
-  font-size: 10.5vw;
+  font-size: 11.5vw;
 }
 /*con01 textBox  */
 #con01 .textBox {
-  width: 1200px;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -97,7 +96,7 @@ body {
 #con01 .name {
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 35%;
   transform: translateX(-50%) rotate(-10deg);
   animation: ani 1s linear infinite;
 }
@@ -116,7 +115,7 @@ body {
 #con01 .web {
   position: absolute;
   left: 8%;
-  top: 66%;
+  top: 62%;
   transform: rotate(-10deg);
   animation: ani01 1s linear infinite;
 }
@@ -135,7 +134,7 @@ body {
 #con01 .work {
   position: absolute;
   right: 5%;
-  top: 12%;
+  top: 8%;
   transform: rotate(-10deg);
   animation: ani02 1s linear infinite;
 }
@@ -158,14 +157,46 @@ body {
   /* gap: 20rem; */
   justify-content: center;
   align-items: center;
-  margin-top: 34px;
+  margin-top: 55px;
 }
 #con01 .bottom .line02 {
-  width: 75%;
+  width: 70%;
 
   border-bottom: 2px solid #222;
 }
 #con01 .bottom p {
   margin-left: 3rem;
   font-size: 2rem;
+}
+
+@media (max-width: 1224px) {
+  #con01 .name {
+    top: 23%;
+    left: 60%;
+  }
+  #con01 .name img {
+    width: 40%;
+  }
+  /*con01 web */
+  #con01 .web {
+    position: absolute;
+    left: 8%;
+    top: 42%;
+  }
+  #con01 .web img {
+    width: 100%;
+  }
+  /*con01 work */
+  #con01 .work {
+    position: absolute;
+    right: 0%;
+    top: 8%;
+  }
+  #con01 .work img {
+    width: 70%;
+  }
+  #con01 .bottom p {
+    margin-left: 2rem;
+    font-size: 2vw;
+  }
 }
