@@ -33,36 +33,40 @@ a {
 }
 body {
   font-family: "Paperlogy";
-  background: url(../img/background.png);
-  word-break: keep-all;
+  background: url(../img/background.jpg);
+  /* word-break: keep-all; */
+  overflow-x: hidden;
 }
-
-/*con01*/
-.con01 {
+/* header  */
+header {
   width: 100%;
-  height: 100vh;
-}
-/* con01 top */
-#con01 .top {
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 6rem;
   box-sizing: border-box;
+  position: fixed;
+  z-index: 999;
 }
-/* con01 top logo */
-#con01 .top .logo h1 {
+/* header logo */
+header .logo h1 {
   font-size: 1.8vw;
 }
-/*con01 top line01  */
-#con01 .top .line01 {
+/*header line01  */
+header .line01 {
   width: 70%;
 
   border-bottom: 2px solid #222;
 }
-/* con01 top bar */
-#con01 .top .bar {
+/* header bar */
+header .bar {
   font-size: 3vw;
+}
+/*con01*/
+.con01 {
+  width: 100%;
+  height: 100vh;
 }
 /*con01 title  */
 #con01 .title {
@@ -72,6 +76,7 @@ body {
   position: relative;
 }
 #con01 .title h2 {
+  padding-top: 9rem;
   font-size: 12vw;
 }
 #con01 .title h2 span {
@@ -82,7 +87,7 @@ body {
 #con01 .name {
   position: absolute;
   left: 50%;
-  top: 35%;
+  top: 40%;
   transform: translateX(-50%) rotate(-10deg);
   animation: ani 1s linear infinite;
 }
@@ -101,8 +106,8 @@ body {
 /*con01 web */
 #con01 .web {
   position: absolute;
-  left: 10%;
-  top: 73%;
+  left: 8%;
+  top: 75%;
 
   animation: ani01 1s linear infinite;
 }
@@ -131,8 +136,8 @@ body {
 /*con01 work  */
 #con01 .work {
   position: absolute;
-  right: 8%;
-  top: -5%;
+  right: 6%;
+  top: 10%;
   animation: ani02 1s linear infinite;
 }
 @keyframes ani02 {
@@ -167,7 +172,7 @@ body {
   border: 2px solid #222;
   border-radius: 50px;
   box-sizing: border-box;
-  padding: 0.5rem 3rem;
+  padding: 0rem 3rem;
   margin: 0px auto;
 }
 #con01 .textBox p {
@@ -197,15 +202,22 @@ body {
 }
 /* con02 */
 #con02 {
-  width: 100%;
+  width: 90%;
   height: 100vh;
-  padding: 1rem 6rem;
-  display: flex;
+
   box-sizing: border-box;
-  /* gap: 2rem; */
+  margin: 0px auto;
 }
-/* con02 left */
-#con02 .left {
+/*con02 .aboutWrap*/
+#con02 .aboutWrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 4rem;
+  box-sizing: border-box;
+}
+/* con02 aboutWrap left */
+#con02 .aboutWrap .left {
   width: 60%;
   padding: 2rem;
   box-sizing: border-box;
@@ -213,76 +225,184 @@ body {
 /* con02 aboutMe */
 #con02 .left .aboutMe {
   width: 100%;
-  padding: 2rem;
-  box-sizing: border-box;
+
   position: relative;
 }
 #con02 .left .aboutMe h2 {
   font-family: "PyeongChangPeace-Bold";
   font-size: 9.2vw;
 }
+
 #con02 .left .aboutMe span {
   display: block;
 }
 /* con02 left aboutMe design */
 #con02 .left .aboutMe .design {
-  width: 450px;
-  height: 120px;
+  width: 50%;
+  height: 130px;
   position: absolute;
-  right: 6%;
+  right: 15%;
   top: 60%;
   transform: rotate(-10deg);
+  animation: ani05 1s linear infinite;
+}
+@keyframes ani05 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-20deg);
+  }
+
+  70% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }
 /* con02 left aboutMe design img */
 #con02 .left .aboutMe .design img {
   width: 100%;
   height: 100%;
 }
-/*con02 left text   */
-#con02 .left .text {
-  width: 85%;
+/*con02 left textBox   */
+#con02 .left .textBox {
+  width: 95%;
+  height: 280px;
   border: 2px solid #222;
-  padding: 2rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
   border-radius: 30px;
-}
-/*con02 left text  p */
-#con02 .left .text p {
-  font-size: 1.5vw;
-  letter-spacing: 3px;
+  font-size: 1.3vw;
   line-height: 1.5;
+  letter-spacing: 2px;
+  margin: 0px auto;
 }
+/*con02 left blink  */
+#con02 .left .blink {
+  animation: blink 0.5s infinite;
+  font-size: 1.2vw;
+  color: #ff4d00;
+}
+
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+/*con02 right */
 #con02 .right {
   width: 40%;
   position: relative;
 }
-#con02 .hi {
+/* con02 hi */
+#con02 .right .hi {
+  width: 35%;
   position: absolute;
-  right: 20px;
+  right: 80px;
+  top: -30px;
+  animation: ani03 1s linear infinite;
 }
+@keyframes ani03 {
+  0% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
+  }
+}
+#con02 .right .hi img {
+  width: 100%;
+  height: 100%;
+}
+/*con02 right imgBox   */
 #con02 .right .imgBox {
-  width: 700px;
-  top: 0px;
+  width: 90%;
+  height: 700px;
 }
 #con02 .right .imgBox img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #con02 .right .hello {
+  width: 60%;
   position: absolute;
   left: -100px;
-  top: 500px;
+  top: 350px;
+  animation: ani04 10s linear infinite;
+}
+@keyframes ani04 {
+  0% {
+    transform: rotate(0deg) scale(0);
+  }
+  20% {
+    transform: rotate(0deg) scale(0);
+  }
+  40% {
+    transform: rotate(360deg) scale(1);
+  }
+
+  70% {
+    transform: rotate(0deg) scale(0);
+  }
+
+  100% {
+    transform: rotate(0deg) scale(0);
+  }
+}
+#con02 .right .hello img {
+  width: 100%;
+  height: 100%;
+}
+/*con02 bottom   */
+#con02 .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#con02 .bottom .line02 {
+  width: 78%;
+  border-bottom: 2px solid #222;
+}
+#con02 .bottom p {
+  margin-left: 3rem;
+  font-size: 1.5vw;
 }
 @media (max-width: 1224px) {
-  /* con01 top */
-  #con01 .top {
-    padding: 2rem 3rem;
+  /* header  */
+  header {
+    padding: 2rem 4rem;
   }
+  /* header logo */
+  header .logo h1 {
+    font-size: 2vw;
+  }
+  /* con01 title */
   #con01 .title {
-    transform: translateY(30px);
+    transform: translateY(0px);
   }
   #con01 .name {
     position: absolute;
 
-    top: 30%;
+    top: 45%;
   }
   #con01 .name img {
     width: 40%;
@@ -291,7 +411,7 @@ body {
   #con01 .work {
     position: absolute;
     right: 2%;
-    top: -10%;
+    top: 20%;
   }
   #con01 .work img {
     width: 60%;
@@ -299,25 +419,48 @@ body {
   #con01 .web {
     position: absolute;
     left: 8%;
-    top: 70%;
+    top: 75%;
   }
   #con01 .web img {
     width: 90%;
   }
+  #con02 .aboutWrap {
+    padding-top: 6rem;
+  }
+  /*  #con02 left aboutMe design*/
+  #con02 .left .aboutMe .design {
+    width: 45%;
+    height: 100px;
+  }
+  /*con02 left textBox   */
+  #con02 .left .textBox {
+    width: 90%;
+    font-size: 1.5vw;
+  }
+  /* con02 right hi */
+  #con02 .right .hi {
+    width: 40%;
+    position: absolute;
+    right: -20px;
+    top: -10px;
+  }
+  /*  con02 right hello   */
+  #con02 .right .hello {
+    width: 60%;
+    position: absolute;
+    left: -100px;
+    top: 400px;
+  }
 }
 @media (max-width: 950px) {
-  /* con01 top */
-  #con01 .top {
-    padding: 2rem 3rem;
-  }
   /* con01 title */
   #con01 .title {
-    transform: translateY(30px);
+    transform: translateY(0px);
   }
   #con01 .name {
     position: absolute;
 
-    top: 25%;
+    top: 45%;
   }
   #con01 .name img {
     width: 30%;
@@ -326,7 +469,7 @@ body {
   #con01 .work {
     position: absolute;
     right: 0%;
-    top: -12%;
+    top: 20%;
   }
   #con01 .work img {
     width: 50%;
@@ -334,7 +477,7 @@ body {
   #con01 .web {
     position: absolute;
     left: 6%;
-    top: 65%;
+    top: 75%;
   }
   #con01 .web img {
     width: 80%;
@@ -349,25 +492,30 @@ body {
   #con01 .bottom {
     margin-top: 30px;
   }
+  #con02 {
+    width: 95%;
+    transform: translateY(50px);
+  }
 }
 @media (max-width: 800px) {
-  /* con01 top */
-  #con01 .top {
-    padding: 2rem 3rem;
+  /* header  */
+  header {
+    padding: 2rem;
   }
-  /* con01 top logo */
-  #con01 .top .logo h1 {
-    font-size: 2.2vw;
+
+  /* header logo */
+  header .logo h1 {
+    font-size: 2.5vw;
   }
   /*con01 title  */
   #con01 .title {
-    transform: translateY(30px);
+    transform: translateY(0px);
   }
   /* con01 name */
   #con01 .name {
     position: absolute;
 
-    top: 20%;
+    top: 50%;
   }
   #con01 .name img {
     width: 30%;
@@ -375,8 +523,8 @@ body {
   /*con01 work  */
   #con01 .work {
     position: absolute;
-    right: -3%;
-    top: -18%;
+    right: -5%;
+    top: 25%;
   }
   #con01 .work img {
     width: 50%;
@@ -384,8 +532,8 @@ body {
   /* con01 web */
   #con01 .web {
     position: absolute;
-    left: 4%;
-    top: 65%;
+    left: 2%;
+    top: 75%;
   }
   #con01 .web img {
     width: 70%;
@@ -401,25 +549,103 @@ body {
     margin-left: 2rem;
     font-size: 2vw;
   }
+  #con02 {
+    transform: translateY(20px);
+    height: 1200px;
+  }
+  /*con02 .aboutWrap*/
+  #con02 .aboutWrap {
+    display: block;
+  }
+  #con02 .left .aboutMe h2 {
+    font-size: 9.5vw;
+    text-align: center;
+    transform: translateY(-30px);
+  }
+  #con02 .left .aboutMe span {
+    display: inline-block;
+  }
+  /* con02 aboutWrap left */
+  #con02 .aboutWrap .left {
+    width: 100%;
+  }
+  /*  con02 left aboutMe design */
+  #con02 .left .aboutMe .design {
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 60%;
+  }
+  #con02 .left .textBox {
+    height: 230px;
+    font-size: 2vw;
+    margin: 0px auto;
+  }
+  /*con02 left blink  */
+  #con02 .left .blink {
+    font-size: 2vw;
+  }
+  /*con02 right */
+  #con02 .right {
+    width: 100%;
+  }
+  /* con02 hi */
+  #con02 .right .hi {
+    width: 20%;
+    position: absolute;
+    right: 100px;
+    top: 0px;
+  }
+  /*con02 right imgBox   */
+  #con02 .right .imgBox {
+    width: 70%;
+    height: 500px;
+    margin: 0px auto;
+    transform: translateY(50px);
+  }
+  #con02 .right .hello {
+    width: 35%;
+    position: absolute;
+    left: 50px;
+    top: 300px;
+  }
+  /*con02 bottom   */
+  #con02 .bottom {
+    width: 100%;
+    transform: translateY(100px);
+  }
 }
+
 @media (max-width: 600px) {
-  /* con01 top */
-  #con01 .top {
-    padding: 2rem;
+  /* header  */
+  header {
+    padding: 2rem 1.5rem;
   }
-  /* con01 top logo */
-  #con01 .top .logo h1 {
-    font-size: 2.2vw;
+
+  /* header logo */
+  header .logo h1 {
+    font-size: 3.5vw;
   }
+  /*header line01  */
+  header .line01 {
+    width: 60%;
+  }
+
+  /* header bar */
+  header .bar {
+    font-size: 4vw;
+  }
+
   /*con01 title  */
   #con01 .title {
-    transform: translateY(30px);
+    transform: translateY(0px);
+    height: 300px;
   }
   /* con01 name */
   #con01 .name {
     position: absolute;
 
-    top: 15%;
+    top: 50%;
   }
   #con01 .name img {
     width: 30%;
@@ -427,8 +653,8 @@ body {
   /*con01 work  */
   #con01 .work {
     position: absolute;
-    right: -6%;
-    top: -25%;
+    right: -8%;
+    top: 25%;
   }
   #con01 .work img {
     width: 40%;
@@ -436,11 +662,11 @@ body {
   /* con01 web */
   #con01 .web {
     position: absolute;
-    left: 0%;
-    top: 55%;
+    left: -2%;
+    top: 75%;
   }
   #con01 .web img {
-    width: 65%;
+    width: 70%;
   }
   /* con01 textBox */
   #con01 .textBox p {
@@ -449,17 +675,30 @@ body {
   #con01 .textBox img {
     width: 8%;
   }
+  /*con01 bottom   */
+  #con01 .bottom {
+    margin-top: 30px;
+  }
   #con01 .bottom p {
     margin-left: 2rem;
     font-size: 2vw;
   }
 }
 @media (max-width: 550px) {
+  /* con01 */
+  #con01 {
+    transform: translateY(-20px);
+  }
+  /*con01 title  */
+  #con01 .title {
+    transform: translateY(0px);
+    height: 270px;
+  }
   /* con01 name */
   #con01 .name {
     position: absolute;
 
-    top: 10%;
+    top: 50%;
   }
   #con01 .name img {
     width: 30%;
@@ -468,7 +707,7 @@ body {
   #con01 .work {
     position: absolute;
     right: -10%;
-    top: -30%;
+    top: 30%;
   }
   #con01 .work img {
     width: 30%;
@@ -476,19 +715,23 @@ body {
   /* con01 web */
   #con01 .web {
     position: absolute;
-    left: -4%;
-    top: 50%;
+    left: -5%;
+    top: 75%;
   }
   #con01 .web img {
     width: 55%;
   }
 }
 @media (max-width: 400px) {
+  /* con01 */
+  #con01 {
+    transform: translateY(-20px);
+  }
   /* con01 name */
   #con01 .name {
     position: absolute;
 
-    top: 5%;
+    top: 50%;
   }
   #con01 .name img {
     width: 30%;
@@ -496,36 +739,32 @@ body {
   /*con01 work  */
   #con01 .work {
     position: absolute;
-    right: -15%;
-    top: -40%;
+    right: -10%;
+    top: 30%;
   }
   #con01 .work img {
-    width: 25%;
+    width: 30%;
   }
   /* con01 web */
   #con01 .web {
     position: absolute;
-    left: -8%;
-    top: 45%;
+    left: -5%;
+    top: 75%;
   }
   #con01 .web img {
-    width: 45%;
-  }
-  /* con01 bottom */
-  #con01 .bottom {
-    margin-top: 15px;
+    width: 55%;
   }
 }
 @media (max-width: 350px) {
-  /* con01 top */
-  #con01 .top {
-    padding: 2rem 0.8rem;
+  /* con01 */
+  #con01 {
+    transform: translateY(-20px);
   }
   /* con01 name */
   #con01 .name {
     position: absolute;
 
-    top: 0%;
+    top: 50%;
   }
   #con01 .name img {
     width: 30%;
@@ -533,19 +772,19 @@ body {
   /*con01 work  */
   #con01 .work {
     position: absolute;
-    right: -20%;
-    top: -50%;
+    right: -10%;
+    top: 30%;
   }
   #con01 .work img {
-    width: 25%;
+    width: 30%;
   }
   /* con01 web */
   #con01 .web {
     position: absolute;
-    left: -14%;
-    top: 35%;
+    left: -5%;
+    top: 75%;
   }
   #con01 .web img {
-    width: 35%;
+    width: 55%;
   }
 }
