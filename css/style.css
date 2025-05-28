@@ -386,6 +386,312 @@ header .bar {
   margin-left: 3rem;
   font-size: 1.5vw;
 }
+
+/* con03 */
+#con03 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+/*con03 bg  */
+#con03 .bg {
+  width: 350px;
+  position: absolute;
+  left: -100px;
+  top: 100px;
+}
+#con03 .bg img {
+  width: 100%;
+}
+/* con03 profile */
+#con03 .profile {
+  width: 900px;
+  margin: 0px auto;
+  padding-top: 100px;
+  box-sizing: border-box;
+  transform: rotate(-5deg);
+  margin-bottom: 20px;
+}
+#con03 .profile img {
+  width: 100%;
+}
+/* con03 bg01 */
+#con03 .bg01 {
+  width: 320px;
+  position: absolute;
+  right: -3%;
+  top: 12%;
+}
+#con03 .bg01 img {
+  width: 100%;
+}
+/* con03 textWrap  */
+#con03 .textWrap {
+  width: 100%;
+}
+/*con03 profileTop*/
+#con03 .profileTop {
+  width: 70%;
+  display: flex;
+  margin: 0px auto;
+  gap: 3rem;
+}
+/*con03 profileTop li*/
+#con03 .profileTop > li {
+  width: 50%;
+
+  height: 300px;
+  border: 2px solid #222;
+  border-radius: 30px;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0px auto;
+}
+#con03 .profileTop > li h3 {
+  font-size: 3rem;
+  font-family: "PyeongChangPeace-Bold";
+  text-align: center;
+  margin-bottom: 50px;
+}
+#con03 .profileTop > li h2 {
+  font-size: 3rem;
+  font-family: "PyeongChangPeace-Bold";
+  text-align: center;
+}
+#con03 .profileTop > li p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-left: 50px;
+  text-decoration: underline;
+  color: #222;
+}
+#con03 .profileTop > li p::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #222;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* con03 profileTop > li education */
+#con03 .profileTop > li .education {
+  width: 280px;
+  position: absolute;
+  left: -100px;
+  top: -25%;
+  transform: rotate(5deg);
+}
+#con03 .profileTop > li .education img {
+  width: 100%;
+}
+/*con03 profileTop > li skill  */
+#con03 .profileTop > li .skill {
+  width: 190px;
+  position: absolute;
+  right: -70px;
+  top: -70px;
+}
+#con03 .profileTop > li .skill img {
+  width: 100%;
+}
+#con03 .profileTop > li:nth-child(2) > img {
+  width: 400px;
+  margin: 0px auto;
+  display: block;
+}
+/*con03 profileBottom  */
+#con03 .profileBottom {
+  width: 70%;
+  display: flex;
+  margin: 3rem auto;
+  gap: 5rem;
+}
+/*con03 profileBottom  */
+#con03 .profileBottom > li {
+  width: 50%;
+
+  height: 150px;
+  border: 2px solid #222;
+  border-radius: 30px;
+  padding: 1rem;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0px auto;
+  position: relative;
+}
+/*con03 profileBottom li career */
+#con03 .profileBottom > li .career {
+  position: absolute;
+  right: -50px;
+  top: -50px;
+}
+/*con03 profileBottom li h3 */
+#con03 .profileBottom > li h3 {
+  font-size: 3rem;
+  font-family: "PyeongChangPeace-Bold";
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/*con03 profileBottom li p */
+#con03 .profileBottom > li p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  margin-left: 50px;
+  text-decoration: underline;
+  color: #222;
+}
+#con03 .profileBottom > li p::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #222;
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*con03 profileBottom li text01 */
+#con03 .profileBottom > li .text01 {
+  margin-left: 130px;
+}
+/*con03 profileBottom li certificate */
+#con03 .profileBottom > li .certificate {
+  position: absolute;
+  left: -60px;
+  top: -10px;
+}
+
+/* con04 */
+#con04 {
+  width: 100%;
+  /* height: 100vh; */
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 700px;
+}
+/* con04 section */
+#con04 section {
+  width: 90%;
+  margin: 0px auto;
+  height: 75vh;
+  color: #fff;
+}
+/*con04 title  */
+#con04 .title {
+  width: 30%;
+  margin-top: 5rem;
+  margin-left: 4rem;
+}
+#con04 .title img {
+  width: 100%;
+  display: inline-block;
+}
+/* con04 bg02 */
+#con04 .bg02 {
+  width: 300px;
+  position: absolute;
+  right: -60px;
+  top: 60px;
+  transform: rotate(30deg);
+  z-index: 10;
+}
+#con04 .bg02 img {
+  width: 100%;
+}
+
+#con04 .project .cloneWrap {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#con04 .project01 .cloneWrap {
+  background-color: #222;
+}
+#con04 .project02 .cloneWrap {
+  background-color: #222;
+}
+#con04 .cloneWrap {
+  width: 100%;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  position: relative;
+}
+#con04 .cloneWrap::after {
+  content: "";
+  width: 1px;
+  height: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+/* contBox */
+#con04 .cloneWrap .contBox {
+  display: flex;
+  justify-content: space-between;
+}
+#con04 .cloneWrap .contBox li {
+  width: 50%;
+}
+#con04 .cloneWrap .contBox li img {
+  width: 80%;
+  display: block;
+  margin: 0px auto;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+/*con04 cloneWrap contBox right  */
+#con04 .cloneWrap .contBox .right {
+  padding: 80px 0px 50px 50px;
+  box-sizing: border-box;
+}
+#con04 .cloneWrap .contBox .right .tit {
+  font-size: 6rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+#con04 .cloneWrap .contBox .right .txtBox {
+  width: 70%;
+  line-height: 1.5;
+}
+#con04 .cloneWrap .contBox .right .txtBox .en1 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+#con04 .cloneWrap .contBox .right .txtBox .en3 {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+#con04 .cloneWrap .contBox .right .txtBox .skill li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+#con04 .cloneWrap .contBox .right .txtBox .skill li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* con05 */
+#con05 {
+  width: 100%;
+  height: 100vh;
+}
+
 @media (max-width: 1224px) {
   /* header  */
   header {

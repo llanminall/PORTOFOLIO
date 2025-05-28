@@ -29,7 +29,7 @@ $(function () {
             start: "0% 50%",
             end: "0% 50%",
             scrub: 2,
-            markers: true,
+            // markers: true,
           },
         })
         .fromTo(
@@ -51,10 +51,10 @@ $(function () {
         .timeline({
           scrollTrigger: {
             trigger: "#con02",
-            start: "0% 40%",
-            end: "0% 40%",
+            start: "0% 0%",
+            end: "0% 0%",
             scrub: 2,
-            markers: true,
+            // markers: true,
           },
         })
         .fromTo(
@@ -73,17 +73,56 @@ $(function () {
   });
 
   const content =
-    "안녕하세요. 책임감과 성실함으로 디자인을 완성하는 웹디자이너 안미나 입니다. 보기 좋고 실용적인 웹사이트를 만들고 싶은 마음으로 웹디자이너가 되고싶습니다. 앞으로도 꾸준히 배우고 성장하면 저만의 색을 담은  웹디자이너를 해 나가고 싶습니다.";
+    "안녕하세요.\n 책임감과 성실함으로 디자인을 완성하는 웹디자이너 안미나 입니다. \n 보기 좋고 실용적인 웹사이트를 만들고 싶은 마음으로 웹디자이너가 되고싶습니다. 앞으로도 꾸준히 배우고 성장하면 저만의 색을 담은  웹디자이너를 해 나가고 싶습니다.";
   const text = document.querySelector(".text");
   let i = 0;
 
   function typing() {
     let txt = content[i++];
     text.innerHTML += txt === "\n" ? "<br/>" : txt;
-    if (i > content.length) {
-      text.textContent = "";
-      i = 0;
+    if (i >= content.length) {
+      clearInterval(stop);
     }
   }
-  setInterval(typing, 300);
+  stop = setInterval(typing, 100);
+
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: "#con03",
+        start: "0% 50%",
+        end: "50% 50%",
+        scrub: 2,
+        // markers: true,
+      },
+    })
+    .fromTo(
+      "#con03 .profile",
+      { y: "50%", opacity: 0 },
+      { y: "0%", opacity: 1, ease: "none", duration: 5 },
+      1
+    )
+    .fromTo(
+      "#con03 .profileTop",
+      { y: "50%", opacity: 0 },
+      { y: "0%", opacity: 1, ease: "none", duration: 5 },
+      5
+    )
+    .fromTo(
+      "#con03 .profileBottom",
+      { y: "50%", opacity: 0 },
+      { y: "0%", opacity: 1, ease: "none", duration: 5 },
+      10
+    );
+  gsap.utils.toArray("section").forEach((section) => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        markers: true,
+      },
+    });
+  });
 });
