@@ -571,10 +571,11 @@ header .bar {
 /* con04 */
 #con04 {
   width: 100%;
+
   /* height: 100vh; */
   overflow: hidden;
   position: relative;
-  margin-bottom: 700px;
+  margin-bottom: 650px;
 }
 /* con04 section */
 #con04 section {
@@ -605,16 +606,17 @@ header .bar {
 #con04 .bg02 img {
   width: 100%;
 }
-
+/*#con04 project cloneWrap 배경 */
 #con04 .project .cloneWrap {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #006eff77;
 }
 #con04 .project01 .cloneWrap {
-  background-color: #222;
+  background-color: #6edbb0;
 }
 #con04 .project02 .cloneWrap {
-  background-color: #222;
+  background-color: #ddb0b4;
 }
+/* con04 cloneWrap  */
 #con04 .cloneWrap {
   width: 100%;
   border-radius: 50px 50px 0 0;
@@ -690,8 +692,354 @@ header .bar {
 #con05 {
   width: 100%;
   height: 100vh;
+  position: relative;
+
+  padding-top: 7rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+/* con05 illustration */
+#con05 .illustration {
+  width: 35%;
+}
+#con05 .illustration img {
+  width: 100%;
+}
+/*#con05 bg03  */
+#con05 .bg03 {
+  width: 20%;
+  position: absolute;
+  right: -130px;
+  top: 10px;
+}
+#con05 .bg03 img {
+  width: 100%;
+}
+/*#con05 bg04 */
+#con05 .bg04 {
+  width: 13%;
+  position: absolute;
+  right: 150px;
+  top: 0px;
+  transform: rotate(-180deg);
+}
+#con05 .bg04 img {
+  width: 100%;
+}
+#con05 .ilustWrap .ilust01 {
+  width: 100%;
+}
+/* #con05 ilust01 */
+#con05 .ilust01 {
+  display: flex;
+  margin: 50px 0px 0px;
+}
+/* #con05 ilust01 li*/
+#con05 .ilust01 > li {
+  width: 400px;
+  height: 450px;
+  padding: 0px 30px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: relative;
+  cursor: pointer;
+}
+/* #con05 ilust01 li img*/
+#con05 .ilust01 > li img {
+  width: 100%;
+  height: 100%;
+}
+/* #con05 ilust01 li before 화살표 */
+#con05 .ilust01 > li::before {
+  width: 160px;
+  height: 160px;
+  content: "";
+  border: 1px solid #fff;
+  background: url(../img/arrow.png) no-repeat center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  border-radius: 50%;
+  z-index: 1s;
+  transition: 0.5s;
+  opacity: 0;
+}
+/* #con05 ilust01 li after */
+#con05 .ilust01 > li::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  background: url(../img/circle.png) no-repeat center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  animation: spin 10s infinite linear;
+}
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+/* #con05 .ilust01 li hover */
+#con05 .ilust01 > li:hover::before {
+  opacity: 1;
+}
+#con05 .ilust01 > li:hover::after {
+  width: 160px;
+  height: 160px;
+}
+#con05 .ilust01 > li:hover {
+  filter: brightness(70%);
+}
+/* #con05 .ilust01 li 기울기 */
+#con05 .ilust01 > li.a {
+  transform: rotate(5deg);
+}
+#con05 .ilust01 > li.b {
+  transform: rotate(-5deg);
+}
+#con05 .ilust01 > li.c {
+  transform: rotate(10deg);
 }
 
+/* #con05 ilustModal*/
+#con05 .ilustModal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+/* #con05 ilustModal  ilust02*/
+#con05 .ilustModal .ilust02 {
+  width: 30%;
+  height: 750px;
+
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+/* #con05 ilustModal  ilust02 li*/
+#con05 .ilustModal .ilust02 > li {
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+#con05 .ilustModal .ilust02 img {
+  width: 100%;
+  height: 100%;
+}
+
+/*con05 bottom   */
+#con05 .bottom {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 75px;
+}
+#con05 .bottom .line02 {
+  width: 70%;
+
+  border-bottom: 2px solid #222;
+}
+#con05 .bottom p {
+  margin-left: 3rem;
+  font-size: 1.5vw;
+}
+/* con06 */
+#con06 {
+  width: 100%;
+  height: 100vh;
+
+  padding: 8rem;
+  box-sizing: border-box;
+  position: relative;
+}
+#con06 .potoshop {
+  width: 25%;
+}
+#con06 .potoshop img {
+  width: 100%;
+}
+#con06 .bg05 {
+  width: 15%;
+  position: absolute;
+  right: 160px;
+  top: 60px;
+}
+#con06 .bg05 img {
+  width: 100%;
+}
+#con06 .bg06 {
+  width: 15%;
+  position: absolute;
+  right: -100px;
+  top: 0px;
+}
+#con06 .bg06 img {
+  width: 100%;
+}
+
+/*simplayScroll*/
+#con06 .simply-scroll .simply-scroll-clip {
+  overflow: hidden;
+  transform: rotate(5deg) translateY(20%);
+}
+#con06 .simply-scroll .simply-scroll-clip .simply-scroll-list li {
+  width: 400px;
+  height: 400px;
+  float: left;
+}
+#con06 .simply-scroll .simply-scroll-clip .simply-scroll-list li img {
+  width: 100%;
+  height: 100%;
+}
+/*con06 bottom   */
+#con06 .bottom {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+#con06 .bottom .line02 {
+  width: 70%;
+
+  border-bottom: 2px solid #222;
+}
+#con06 .bottom p {
+  margin-left: 3rem;
+  font-size: 1.5vw;
+}
+/* con07  */
+#con07 {
+  width: 100%;
+  height: 100vh;
+}
+/* con07 contact  */
+#con07 .contact {
+  width: 80%;
+  margin: 0px auto;
+  padding-top: 6rem;
+  display: flex;
+}
+/* con07 contact  li*/
+#con07 .contact li {
+  width: 50%;
+  position: relative;
+}
+/* con07 contact  li h2*/
+#con07 .contact li h2 {
+  font-size: 7vw;
+  font-family: "PyeongChangPeace-Bold";
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+#con07 .contact li span {
+  display: block;
+}
+
+/* con07 textBox02 */
+#con07 .textBox02 {
+  width: 90%;
+  height: 250px;
+  border: 2px solid #222;
+  border-radius: 30px;
+  margin: 0px auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+#con07 .textBox02 p {
+  font-size: 1.7rem;
+  letter-spacing: 3px;
+}
+#con07 .textBox02 .txt02 {
+  margin-top: 1rem;
+  text-align: center;
+}
+/* con07 bg07 */
+#con07 .bg07 {
+  width: 30%;
+  position: absolute;
+  left: 0px;
+  top: 500px;
+
+  animation: spin01 6s infinite linear;
+}
+@keyframes spin01 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#con07 .bg07 img {
+  width: 100%;
+}
+/* con07 bg08 */
+#con07 .bg08 {
+  width: 40%;
+  position: absolute;
+  right: -150px;
+  top: 100px;
+  transform: rotate(30deg);
+}
+#con07 .bg08 img {
+  width: 100%;
+}
+/*con07 bg09   */
+#con07 .bg09 {
+  width: 35%;
+  position: absolute;
+  left: 30px;
+  top: 50px;
+}
+#con07 .bg09 img {
+  width: 100%;
+}
+/* con07 .telContact  */
+#con07 .telContact {
+  width: 100%;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+#con07 .telContact img {
+  width: 100%;
+}
+/*con07 bottom   */
+#con07 .bottom {
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#con07 .bottom .line02 {
+  width: 70%;
+
+  border-bottom: 2px solid #222;
+}
+#con07 .bottom p {
+  margin-left: 3rem;
+  font-size: 1.5vw;
+}
 @media (max-width: 1224px) {
   /* header  */
   header {

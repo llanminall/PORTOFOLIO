@@ -125,4 +125,67 @@ $(function () {
       },
     });
   });
+  let list = gsap.utils.toArray("#con05 .ilust01 > li");
+  let listA = gsap.utils.toArray("#con05 .ilust01 > li.a");
+  let listB = gsap.utils.toArray("#con05 .ilust01 > li.b");
+  let listC = gsap.utils.toArray("#con05 .ilust01 > li.c");
+  gsap.to(list, {
+    scrollTrigger: {
+      trigger: "#con05",
+      pin: true,
+      scrub: 2,
+      start: "center center",
+      end: "100% 0%",
+      // markers: true,
+    },
+    xPercent: -500,
+    ease: "none",
+  });
+
+  gsap.to(listA, {
+    rotation: -30,
+    scrollTrigger: {
+      trigger: "#con05",
+      scrub: 2,
+      start: "center center",
+      end: "100%",
+    },
+  });
+  gsap.to(listB, {
+    rotation: 50,
+    scrollTrigger: {
+      trigger: "#con05",
+      scrub: 2,
+      start: "center center",
+      end: "100%",
+    },
+  });
+  gsap.to(listC, {
+    rotation: -50,
+    scrollTrigger: {
+      trigger: "#con05",
+      scrub: 2,
+      start: "center center",
+      end: "100%",
+    },
+  });
+  $("#con05 .ilust01 li").on("click", function () {
+    let j = $(this).index();
+    $("#con05 .ilustModal ").show();
+    $("#con05 .ilust02 > li").eq(j).animate({ width: "100%", height: "100%" });
+  });
+  $("#con05 .ilust02 > li").on("click", function () {
+    $("#con05 .ilustModal").hide();
+    $("#con05 .ilust02 > li").animate({
+      width: "0%",
+      height: "0%",
+    });
+  });
+  $(function () {
+    $("#con06 .photoshopList").simplyScroll({
+      speed: 5,
+      pauseOnHover: false,
+      pauseOnTouch: false,
+    });
+  });
 });
