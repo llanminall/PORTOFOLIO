@@ -12,7 +12,7 @@ $(function () {
       $(".text").html("");
       clearInterval(stop);
     }
-    if (sc >= 800 && sc < con03 && !hasTyped) {
+    if (sc >= con02 && sc < con03 && !hasTyped) {
       hasTyped = true;
       const content =
         "안녕하세요.\n 책임감과 성실함으로 디자인을 완성하는 웹디자이너 안미나 입니다. \n 보기 좋고 실용적인 웹사이트를 만들고 싶은 마음으로 웹디자이너가 되고싶습니다. 앞으로도 꾸준히 배우고 성장하면 저만의 색을 담은  웹디자이너를 해 나가고 싶습니다.";
