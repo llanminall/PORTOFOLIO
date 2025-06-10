@@ -131,24 +131,14 @@ $(function () {
       { y: "0%", opacity: 1, ease: "none", duration: 5 },
       10
     );
-  gsap.utils.toArray("section").forEach((section, k) => {
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        pin: true,
-        pinSpacing: k === 2 ? true : false,
-        markers: true,
-      },
-    });
-  });
-  let list = gsap.utils.toArray("#con05 .ilust01 > li");
-  let listA = gsap.utils.toArray("#con05 .ilust01 > li.a");
-  let listB = gsap.utils.toArray("#con05 .ilust01 > li.b");
-  let listC = gsap.utils.toArray("#con05 .ilust01 > li.c");
+
+  let list = gsap.utils.toArray("#con04 .ilust01 > li");
+  let listA = gsap.utils.toArray("#con04 .ilust01 > li.a");
+  let listB = gsap.utils.toArray("#con04 .ilust01 > li.b");
+  let listC = gsap.utils.toArray("#con04 .ilust01 > li.c");
   gsap.to(list, {
     scrollTrigger: {
-      trigger: "#con05",
+      trigger: "#con04",
       pin: true,
       scrub: 2,
       start: "center center",
@@ -162,7 +152,7 @@ $(function () {
   gsap.to(listA, {
     rotation: -30,
     scrollTrigger: {
-      trigger: "#con05",
+      trigger: "#con04",
       scrub: 2,
       start: "center center",
       end: "100%",
@@ -171,7 +161,7 @@ $(function () {
   gsap.to(listB, {
     rotation: 50,
     scrollTrigger: {
-      trigger: "#con05",
+      trigger: "#con04",
       scrub: 2,
       start: "center center",
       end: "100%",
@@ -180,35 +170,46 @@ $(function () {
   gsap.to(listC, {
     rotation: -50,
     scrollTrigger: {
-      trigger: "#con05",
+      trigger: "#con04",
       scrub: 2,
       start: "center center",
       end: "100%",
     },
   });
-  $("#con05 .ilust01 li").on("click", function () {
+  $("#con04 .ilust01 li").on("click", function () {
     let j = $(this).index();
-    $("#con05 .ilustModal ").show();
-    $("#con05 .ilust02 > li").eq(j).animate({ width: "100%", height: "100%" });
+    $("#con04 .ilustModal ").show();
+    $("#con04 .ilust02 > li").eq(j).animate({ width: "100%", height: "100%" });
   });
-  $("#con05 .ilust02 > li").on("click", function () {
-    $("#con05 .ilustModal").hide();
-    $("#con05 .ilust02 > li").animate({
+  $("#con04 .ilust02 > li").on("click", function () {
+    $("#con04 .ilustModal").hide();
+    $("#con04 .ilust02 > li").animate({
       width: "0%",
       height: "0%",
     });
   });
-  $(function () {
-    $("#con06 .photoshopList").simplyScroll({
-      speed: 5,
-      pauseOnHover: false,
-      pauseOnTouch: false,
+  gsap.utils.toArray("section").forEach((section, k) => {
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        pin: true,
+        pinSpacing: k === 2 ? true : false,
+        markers: true,
+      },
     });
+  });
+
+  $("#con05 .view01  ").on("click", function () {
+    $("#con05 .proposalModal").show();
+  });
+  $("#con05 .proposalModal .close").on("click", function () {
+    $("#con05 .proposalModal").hide();
   });
   gsap
     .timeline({
       scrollTrigger: {
-        trigger: "#con07",
+        trigger: "#con06",
         start: "0% 50%",
         end: "50% 50%",
         scrub: 2,
@@ -216,19 +217,19 @@ $(function () {
       },
     })
     .fromTo(
-      "#con07 h2",
+      "#con06 h2",
       { y: "50%", opacity: 0 },
       { y: "0%", opacity: 1, ease: "none", duration: 5 },
       1
     )
     .fromTo(
-      "#con07 .telContact",
+      "#con06 .telContact",
       { y: "50%", opacity: 0 },
       { y: "0%", opacity: 1, ease: "none", duration: 5 },
       2
     )
     .fromTo(
-      "#con07 .textBox02",
+      "#con06 .textBox02",
       { y: "50%", opacity: 0 },
       { y: "0%", opacity: 1, ease: "none", duration: 5 },
       3
