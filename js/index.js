@@ -7,11 +7,11 @@ $(function () {
   $(window).on("scroll", function () {
     let sc = $(this).scrollTop();
     console.log(sc);
-    if (sc < con02) {
-      hasTyped = false;
-      $(".text").html("");
-      clearInterval(stop);
-    }
+    // if (sc < con02) {
+    //   hasTyped = false;
+    //   $(".text").html("");
+    //   clearInterval(stop);
+    // }
     if (sc >= con02 && sc < con03 && !hasTyped) {
       hasTyped = true;
       const content =
@@ -29,6 +29,7 @@ $(function () {
       stop = setInterval(typing, 100);
     }
   });
+  // header bar
   $(".bar").on("click", function () {
     $("header .modal_menu").fadeIn(200);
     $("header .modal_menu").css({ display: "flex" });
@@ -57,6 +58,7 @@ $(function () {
       duration: 2,
     }
   );
+  // con02
   ScrollTrigger.matchMedia({
     "(min-width:1024px)": function () {
       gsap
@@ -87,11 +89,11 @@ $(function () {
       gsap
         .timeline({
           scrollTrigger: {
-            trigger: "#con02",
-            start: "0% 0%",
-            end: "0% 0%",
+            trigger: "#con01",
+            start: "30% 0%",
+            end: "30% 0%",
             scrub: 2,
-            // markers: true,
+            markers: true,
           },
         })
         .fromTo(
@@ -137,6 +139,12 @@ $(function () {
       { y: "0%", opacity: 1, ease: "none", duration: 5 },
       10
     );
+  $("#con03 .txtBox03 img   ").on("click", function () {
+    $("#con03 .modalCareer").show();
+  });
+  $("#con03 .modalCareer .close").on("click", function () {
+    $("#con03 .modalCareer").hide();
+  });
 
   let list = gsap.utils.toArray("#con04 .ilust01 > li");
   let listA = gsap.utils.toArray("#con04 .ilust01 > li.a");
@@ -201,7 +209,7 @@ $(function () {
         start: "top top",
         pin: true,
         pinSpacing: k === 2 ? true : false,
-        markers: true,
+        // markers: true,
       },
     });
   });
@@ -219,7 +227,7 @@ $(function () {
         start: "0% 50%",
         end: "50% 50%",
         scrub: 2,
-        markers: true,
+        // markers: true,
       },
     })
     .fromTo(
