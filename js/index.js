@@ -29,7 +29,13 @@ $(function () {
       stop = setInterval(typing, 100);
     }
   });
-
+  $(".bar").on("click", function () {
+    $("header .modal_menu").fadeIn(200);
+    $("header .modal_menu").css({ display: "flex" });
+  });
+  $(".close").on("click", function () {
+    $("header .modal_menu").fadeOut(200);
+  });
   gsap.registerPlugin(ScrollTrigger);
   //con01
   gsap.fromTo(
