@@ -90,8 +90,8 @@ $(function () {
         .timeline({
           scrollTrigger: {
             trigger: "#con01",
-            start: "30% 0%",
-            end: "30% 0%",
+            start: "10% 0%",
+            end: "10% 0%",
             scrub: 2,
             markers: true,
           },
