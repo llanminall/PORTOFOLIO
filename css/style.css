@@ -232,7 +232,7 @@ header .close {
 
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 120px;
 }
 #con01 .bottom .line02 {
   width: 70%;
@@ -650,7 +650,7 @@ header .close {
     transform: rotate(360deg);
   }
 }
-/* 모달창 */
+/*con03 모달창 */
 #con03 .modalCareer {
   width: 100%;
   position: absolute;
@@ -744,10 +744,11 @@ header .close {
 #con04 .bg04 img {
   width: 100%;
 }
+
+/* con04  ilustWrap ilust01 */
 #con04 .ilustWrap .ilust01 {
   width: 100%;
 }
-/* con04 ilust01 */
 #con04 .ilust01 {
   display: flex;
   margin: 50px 0px 0px;
@@ -1242,7 +1243,8 @@ header .close {
   }
   /*con01*/
   #con01 {
-    height: 55vw;
+    height: 75vh;
+    background-color: #217af4;
   }
 
   #con01 .name {
@@ -1270,15 +1272,25 @@ header .close {
   #con01 .web img {
     width: 90%;
   }
+  /*con01 textBox  */
+  #con01 .textBox {
+    margin: -30px auto;
+  }
+  /*con01 bottom   */
+  #con01 .bottom {
+    margin-top: 90px;
+  }
   /* con02 */
   #con02 {
+    height: 90vh;
     padding-top: 0rem;
+    background-color: #6edbb0;
   }
   /*con02 .aboutWrap*/
   #con02 .aboutWrap {
     width: 100%;
 
-    padding: 5rem 2rem;
+    padding: 0rem 2rem;
     box-sizing: border-box;
     margin-top: 0rem;
   }
@@ -1296,12 +1308,12 @@ header .close {
   #con02 .left .textBox {
     width: 100%;
     font-size: 1.8vw;
-    height: 21vw;
+    height: 25vw;
   }
   /*con02 right imgBox   */
   #con02 .right .imgBox {
     width: 100%;
-    height: 50vw;
+    height: 40vw;
   }
   /*con02 right imgBox   */
   #con02 .right .imgBox img {
@@ -1318,13 +1330,14 @@ header .close {
   #con02 .right .hello {
     width: 60%;
 
-    left: -90px;
+    left: -50px;
     top: 50%;
   }
   /* con03 */
   #con03 {
     width: 100%;
-    height: 700px;
+    height: 80vh;
+    background-color: #ddb0b4;
   }
   /*con03 profileTop*/
   #con03 .profileTop {
@@ -1392,6 +1405,11 @@ header .close {
     left: -50px;
     top: 10px;
   }
+  /* con04 */
+  #con04 {
+    background-color: #6edbb0;
+    height: 100vh;
+  }
   /* con04 illustration */
   #con04 .illustration {
     width: 40%;
@@ -1405,12 +1423,12 @@ header .close {
   }
   /* con04 ilust01 li*/
   #con04 .ilust01 > li {
-    width: 28%;
+    width: 33%;
     height: 50vh;
   }
   /* con04 ilustModal  ilust02*/
   #con04 .ilustModal .ilust02 {
-    width: 40%;
+    width: 45%;
     height: 85vh;
   }
 }
@@ -1537,6 +1555,7 @@ header .close {
   /*con03 profileBottom li certificate */
   #con03 .profileBottom > li .certificate {
     width: 40%;
+    top: 20%;
   }
   /* con04 illustration */
   #con04 .illustration {
@@ -1549,12 +1568,12 @@ header .close {
   }
   /* con04 ilust01 li*/
   #con04 .ilust01 > li {
-    width: 40%;
+    width: 45%;
     height: 50vh;
   }
   /* con04 ilustModal  ilust02*/
   #con04 .ilustModal .ilust02 {
-    width: 50%;
+    width: 60%;
     height: 85vh;
   }
 }
@@ -1570,7 +1589,7 @@ header .close {
   }
   /*con01*/
   #con01 {
-    height: 60vw;
+    height: 65vw;
   }
   /*con01 title  */
   #con01 .title {
@@ -1758,11 +1777,11 @@ header .close {
   /*con03 profileBottom li certificate */
   #con03 .profileBottom > li .certificate {
     width: 45%;
-    left: -30px;
-    top: 0px;
+    left: -15%;
+    top: 10%;
   }
   #con04 {
-    height: 700px;
+    height: 100vh;
     background-color: #6edbb0;
   }
   /* con04 illustration */
@@ -1776,18 +1795,18 @@ header .close {
   }
   /* con04 ilust01 li*/
   #con04 .ilust01 > li {
-    width: 40%;
-    height: 40vh;
+    width: 55%;
+    height: 60vh;
   }
   /* con04 ilustModal  ilust02*/
   #con04 .ilustModal .ilust02 {
-    width: 50%;
-    height: 65vh;
+    width: 65%;
+    height: 80vh;
   }
 }
 @media (max-width: 750px) {
   #con03 {
-    height: 550px;
+    height: 65vh;
   }
   /* con03 .profileBottom > li .txtBox03 img  */
   #con03 .profileBottom > li .txtBox03 img {
@@ -1948,6 +1967,11 @@ header .close {
     display: block;
     margin: 0rem auto;
   }
+  /*con03 profileTop > li skill  */
+  #con03 .profileTop > li .skill {
+    right: -10%;
+    top: -18%;
+  }
   /*con03 profileBottom  */
   #con03 .profileBottom > li {
     width: 80%;
@@ -1979,14 +2003,19 @@ header .close {
   /*con03 profileBottom li certificate */
   #con03 .profileBottom > li .certificate {
     width: 40%;
-    left: -50px;
-    top: -15px;
+    left: -10%;
+    top: -5%;
   }
-
+  /* con03 .profileBottom > li .txtBox03 img  */
+  #con03 .profileBottom > li .txtBox03 img {
+    width: 16%;
+    right: 18%;
+    top: -350%;
+  }
   /* 모달창 */
   #con03 .modalCareer {
     left: 5%;
-    top: 35%;
+    top: 20%;
     display: none;
   }
 
@@ -2012,6 +2041,16 @@ header .close {
   #con04 .ilustModal .ilust02 {
     width: 60%;
     height: 65vh;
+  }
+  /* con04 ilust01 li*/
+  #con04 .ilust01 > li {
+    width: 75%;
+    height: 60vh;
+  }
+  /* con04 ilustModal  ilust02*/
+  #con04 .ilustModal .ilust02 {
+    width: 75%;
+    height: 80vh;
   }
 }
 @media (max-width: 550px) {
@@ -2065,12 +2104,22 @@ header .close {
   }
   /* con03 */
   #con03 {
-    height: 240vw;
+    height: 110vh;
   }
   /*con03 profileTop li*/
   #con03 .profileTop > li {
     width: 80%;
     height: 22vh;
+  }
+  /* con04 ilust01 li*/
+  #con04 .ilust01 > li {
+    width: 85%;
+    height: 60vh;
+  }
+  /* con04 ilustModal  ilust02*/
+  #con04 .ilustModal .ilust02 {
+    width: 90%;
+    height: 80vh;
   }
 }
 @media (max-width: 450px) {
@@ -2099,6 +2148,30 @@ header .close {
   #con02 .right .hello {
     left: 50px;
     top: 200px;
+  }
+  /* con03 profileTop > li education */
+  #con03 .profileTop > li .education {
+    left: -50px;
+    top: -25%;
+  }
+  /*con03 profileBottom li certificate */
+  #con03 .profileBottom > li .certificate {
+    left: -10%;
+    top: 15%;
+  }
+  /* con04 ilust01 li*/
+  #con04 .ilust01 > li {
+    width: 110%;
+    height: 60vh;
+  }
+  /* con04 ilustModal  ilust02*/
+  #con04 .ilustModal .ilust02 {
+    width: 90%;
+    height: 60vh;
+  }
+  /* #con04 ilustModal  ilust02 li*/
+  #con04 .ilustModal .ilust02 > li {
+    top: 65%;
   }
 }
 @media (max-width: 400px) {
@@ -2178,7 +2251,7 @@ header .close {
   }
   /* con03 */
   #con03 {
-    height: 260vw;
+    height: 105vh;
   }
   /*con03 profileTop li*/
   #con03 .profileTop > li {
@@ -2223,7 +2296,7 @@ header .close {
   /*con03 profileBottom li certificate */
   #con03 .profileBottom > li .certificate {
     left: -30px;
-    top: 10px;
+    top: 20px;
   }
   /* con03 .profileBottom > li .txtBox03 img  */
   #con03 .profileBottom > li .txtBox03 img {
@@ -2231,6 +2304,20 @@ header .close {
     position: absolute;
     right: 7%;
     top: -500%;
+  }
+  /* con04 ilust01 li*/
+  #con04 .ilust01 > li {
+    width: 120%;
+    height: 60vh;
+  }
+  /* con04 ilustModal  ilust02*/
+  #con04 .ilustModal .ilust02 {
+    width: 90%;
+    height: 55vh;
+  }
+  /* #con04 ilustModal  ilust02 li*/
+  #con04 .ilustModal .ilust02 > li {
+    top: 70%;
   }
 }
 @media (max-width: 350px) {
@@ -2314,7 +2401,7 @@ header .close {
   }
   /* con03 */
   #con03 {
-    height: 850px;
+    height: 102vh;
   }
   /*con03 profileTop li*/
   #con03 .profileTop > li {
@@ -2331,8 +2418,8 @@ header .close {
   }
   /* con03 profileTop > li education */
   #con03 .profileTop > li .education {
-    left: -20px;
-    top: -35px;
+    left: -25px;
+    top: -40px;
   }
   /*con03 profileTop > li skill  */
   #con03 .profileTop > li .skill {
@@ -2364,28 +2451,22 @@ header .close {
   /*con03 profileBottom li certificate */
   #con03 .profileBottom > li .certificate {
     left: -20px;
-    top: 10px;
+    top: 25px;
   }
-  #con04 {
-    height: 650px;
-  }
-  /* con04 illustration */
-  #con04 .illustration {
-    width: 90%;
-  }
-  /*#con04 bg03  */
-  #con04 .bg03 {
-    right: -10px;
-    top: 10px;
-  }
+
   /* con04 ilust01 li*/
   #con04 .ilust01 > li {
-    width: 85%;
-    height: 35vh;
+    width: 100%;
+    height: 45vh;
+    margin-top: 100px;
   }
   /* con04 ilustModal  ilust02*/
   #con04 .ilustModal .ilust02 {
-    width: 85%;
-    height: 45vh;
+    width: 90%;
+    height: 55vh;
+  }
+  /* #con04 ilustModal  ilust02 li*/
+  #con04 .ilustModal .ilust02 > li {
+    top: 70%;
   }
 }

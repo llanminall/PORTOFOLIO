@@ -2,7 +2,7 @@ $(function () {
   let con01 = $("#con01").offset().top;
   let con02 = $("#con02").offset().top;
   let con03 = $("#con03").offset().top;
-
+  // scroll
   const content =
     "안녕하세요.\n 책임감과 성실함으로 디자인을 완성하는 웹디자이너 안미나 입니다. \n 보기 좋고 실용적인 웹사이트를 만들고 싶은 마음으로 웹디자이너가 되고싶습니다. 앞으로도 꾸준히 배우고 성장하면 저만의 색을 담은  웹디자이너를 해 나가고 싶습니다.";
   const text = document.querySelector(".text");
@@ -58,7 +58,7 @@ $(function () {
       duration: 2,
     }
   );
-  // con02
+  // con02 con03 반응형
   ScrollTrigger.matchMedia({
     "(min-width:1024px)": function () {
       gsap
@@ -83,6 +83,34 @@ $(function () {
           { x: "0%", opacity: 1, ease: "none", duration: 5 },
           0
         );
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#con03",
+            start: "0% 50%",
+            end: "50% 50%",
+            scrub: 2,
+            // markers: true,
+          },
+        })
+        .fromTo(
+          "#con03 .profile",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          1
+        )
+        .fromTo(
+          "#con03 .profileTop",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          5
+        )
+        .fromTo(
+          "#con03 .profileBottom",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          10
+        );
     },
 
     "(max-width:950px)": function () {
@@ -93,7 +121,7 @@ $(function () {
             start: "10% 0%",
             end: "10% 0%",
             scrub: 2,
-            markers: true,
+            // markers: true,
           },
         })
         .fromTo(
@@ -108,37 +136,37 @@ $(function () {
           { x: "0%", opacity: 1, ease: "none", duration: 5 },
           0
         );
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#con02",
+            start: "50% 20%",
+            end: "100% 20%",
+            scrub: 2,
+            // markers: true,
+          },
+        })
+        .fromTo(
+          "#con03 .profile",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          1
+        )
+        .fromTo(
+          "#con03 .profileTop",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          5
+        )
+        .fromTo(
+          "#con03 .profileBottom",
+          { y: "50%", opacity: 0 },
+          { y: "0%", opacity: 1, ease: "none", duration: 5 },
+          10
+        );
     },
   });
-
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: "#con03",
-        start: "0% 50%",
-        end: "50% 50%",
-        scrub: 2,
-        // markers: true,
-      },
-    })
-    .fromTo(
-      "#con03 .profile",
-      { y: "50%", opacity: 0 },
-      { y: "0%", opacity: 1, ease: "none", duration: 5 },
-      1
-    )
-    .fromTo(
-      "#con03 .profileTop",
-      { y: "50%", opacity: 0 },
-      { y: "0%", opacity: 1, ease: "none", duration: 5 },
-      5
-    )
-    .fromTo(
-      "#con03 .profileBottom",
-      { y: "50%", opacity: 0 },
-      { y: "0%", opacity: 1, ease: "none", duration: 5 },
-      10
-    );
+  // con03
   $("#con03 .txtBox03 img   ").on("click", function () {
     $("#con03 .modalCareer").show();
   });
@@ -146,6 +174,7 @@ $(function () {
     $("#con03 .modalCareer").hide();
   });
 
+  // con04
   let list = gsap.utils.toArray("#con04 .ilust01 > li");
   let listA = gsap.utils.toArray("#con04 .ilust01 > li.a");
   let listB = gsap.utils.toArray("#con04 .ilust01 > li.b");
@@ -159,7 +188,7 @@ $(function () {
       end: "100% 0%",
       // markers: true,
     },
-    xPercent: -250,
+    xPercent: -550,
     ease: "none",
   });
 
@@ -202,6 +231,7 @@ $(function () {
       height: "0%",
     });
   });
+  //con05
   gsap.utils.toArray("section").forEach((section, k) => {
     gsap.timeline({
       scrollTrigger: {
